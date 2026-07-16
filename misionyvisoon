@@ -8,13 +8,13 @@
 <header>
     <div class="header-container">
         <h1>🤖 Blue Changes</h1>
-       <nav>
-    <!-- El ../ sale de la carpeta y busca tu archivo "pagina.html" -->
-    <a href="../pagina.html">Inicio</a> 
+      <nav>
+    <!-- Cambia '../pagina.html' por '../index.html' -->
+    <a href="../index.html">Inicio</a> 
     <a href="#mision">Misión</a>
     <a href="#vision">Visión</a>
-    <!-- Te manda directo a la sección Metodología dentro de pagina.html -->
-    <a href="../pagina.html#como">Metodología</a> 
+    <!-- Cambia '../pagina.html#como' por '../index.html#como' -->
+    <a href="../index.html#como">Metodología</a> 
 </nav>
 
     </div>
