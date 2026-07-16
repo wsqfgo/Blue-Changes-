@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blue Changes - Proyecto Social</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+
+        /* HEADER */
+        header {
+            background: linear-gradient(135deg, #0031a3 0%, #0052cc 100%);
+            color: white;
+            padding: 2rem 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            flex-direction: column;        
+    align-items: center;           
+    gap: 1.5rem;  
+            }
+
+        header h2 {
+            font-size: 1.25rem;
+            font-weight: 500;
+            color: dark blue;
+        }
+
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+
+        /* NAVEGACION */
+        nav {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        nav a:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+
+        /* CONTENEDOR PRINCIPAL */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* SECCIONES */
+        section {
+            margin: 3rem 0;
+            background: white;
+            padding: 3rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        section h2 {
+            color: #0031a3;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 3px solid #68ade9;
+            padding-bottom: 1rem;
+        }
+
+        /* SECCION QUIENES SOMOS */
+        .quienes-somos {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .quienes-somos .texto {
+            flex: 1 1 400px;
+        }
+
+        .quienes-somos .texto p {
+            font-size: 1.1rem;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        .quienes-somos .imagen {
+            flex: 1 1 300px;
+            text-align: center;
+        }
+
+        .quienes-somos .imagen img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease;
+        }
+
+        .quienes-somos .imagen img:hover {
+            transform: scale(1.05);
+        }
+
+        /* SECCION PROPOSITO */
+        #Proposito {
+            background: linear-gradient(135deg, #68ade9 0%, #40a9d9 100%);
+            color: white;
+        }
+
+        #Proposito h2 {
+            color: white;
+            border-bottom-color: rgba(255, 255, 255, 0.3);
+        }
+
+        #Proposito p {
+            font-size: 1.2rem;
+            font-weight: 500;
+            line-height: 2;
+            font-style: italic;
+        }
+
+        /* SECCION COMO */
+        #como p {
+            font-size: 1.1rem;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: #0031a3;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        footer p {
+            margin-bottom: 0.5rem;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+
+            nav {
+                gap: 1rem;
+            }
+
+            nav a {
+                padding: 0.3rem 0.7rem;
+                font-size: 0.9rem;
+            }
+
+            .quienes-somos {
+                gap: 1.5rem;
+            }
+
+            .quienes-somos .texto,
+            .quienes-somos .imagen {
+                flex: 1 1 100%;
+            }
+
+            section {
+                padding: 1.5rem;
+            }
+
+            section h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <header>
+        <div class="header-container">
+            <h1>🤖 Blue Changes </h1>
+            <h2> Dejando huella </h2>
+            <nav>
+                <a href="#misionyvision"> Mision y vision </a>
+                <a href="#Proposito">Propósito</a>
+                <a href="#como">Metodología</a>
+            </nav>
+        </div>
+    </header>
+
+    
+    <div class="container">
+        
+        <section id="quienes-somos" class="quienes-somos">
+            <div class="texto">
+                <h2>¿Quiénes somos?</h2>
+                <p>Blue changes es un proyecto social creado para enseñar a niños y niñas de entre 8 y 14 años a crear mini robots sumo de pelea con base en materiales reciclados, fomentando su interés por la robótica y mostrándoles que la tecnología no está tan lejos de ellos como parece.</p>
+                <p style="margin-top: 1rem;">Además, buscamos sensibilizarlos sobre el cuidado del medio ambiente a través de la reutilización de materiales y destacar la importancia de la participación de las mujeres en las áreas STEAM (ciencia, tecnología, ingeniería, artes y matemáticas).</p>
+            </div>
+            <div class="imagen">
+                <img src="blue.png" alt="Niños con robot sumo de Blue Changes" />
+            </div>
+        </section>
+
+       
+        <section id="Proposito">
+            <h2>🎯 Nuestro propósito</h2>
+            <p>"Empoderar a la juventud de comunidades vulnerables a través de la robótica de bajo costo para transformar 'desechos' en tecnología, cerrando la brecha educativa en STEAM"</p>
+        </section>
+
+       
+        <section id="como">
+            <h2>🚀 ¿Cómo lo hacemos?</h2>
+            <p>Esto lo logramos con base a diferentes actividades relacionadas a las áreas STEAM, cada una de las actividades tiene su objetivo y propósito. Blue Changes no solo realiza actividades porque sí, en cada una de estas buscamos despertar la imaginación y el pensamiento crítico de cada niño para que al final de toda la sesión logre adquirir nuevas habilidades y conocimientos acerca de las áreas STEAM para que lo puedan aplicar tanto en la escuela como en su vida diaria.</p>
+        </section>
+    </div>
+
+    
+    <footer>
+        <p>&copy; 2026 Blue Changes - Proyecto Social</p>
+        <p>Transformando desechos en tecnología 🌍</p>
+         <p> Contacto: </p>
+    </footer>
+</body>
+</html>
