@@ -5,6 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Misión y Visión</title>
 </head>
+<header>
+    <div class="header-container">
+        <h1>🤖 Blue Changes</h1>
+        <nav>
+            <!-- Te manda al inicio del sitio -->
+            <a href="../index.html">Inicio</a> 
+            <a href="#mision">Misión</a>
+            <a href="#vision">Visión</a>
+            <!-- Te manda directo a la sección Metodología del inicio -->
+            <a href="../index.html#como">Metodología</a> 
+        </nav>
+    </div>
+</header>
+
 <body id="misionyvision">
     <style>
         * {
