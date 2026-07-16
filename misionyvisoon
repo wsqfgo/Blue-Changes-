@@ -8,14 +8,15 @@
 <header>
     <div class="header-container">
         <h1>🤖 Blue Changes</h1>
-        <nav>
-            <!-- Te manda al inicio del sitio -->
-            <a href="../index.html">Inicio</a> 
-            <a href="#mision">Misión</a>
-            <a href="#vision">Visión</a>
-            <!-- Te manda directo a la sección Metodología del inicio -->
-            <a href="../index.html#como">Metodología</a> 
-        </nav>
+       <nav>
+    <!-- El ../ sale de la carpeta y busca tu archivo "pagina.html" -->
+    <a href="../pagina.html">Inicio</a> 
+    <a href="#mision">Misión</a>
+    <a href="#vision">Visión</a>
+    <!-- Te manda directo a la sección Metodología dentro de pagina.html -->
+    <a href="../pagina.html#como">Metodología</a> 
+</nav>
+
     </div>
 </header>
 
