@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Actividades Fuera del Proyecto </title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+
+        /* HEADER */
+        header {
+            background: linear-gradient(135deg, #0031a3 0%, #0052cc 100%);
+            color: white;
+            padding: 2rem 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+
+        header nav {
+            display: flex;
+            gap: 2rem;
+        }
+
+        header nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: opacity 0.3s ease;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        header nav a:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+            opacity: 1;
+        }
+
+        /* CONTENEDOR PRINCIPAL */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* SECCIONES */
+        section {
+            margin: 3rem 0;
+            background: white;
+            padding: 3rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        section h2 {
+            color: #0031a3;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 3px solid #68ade9;
+            padding-bottom: 1rem;
+        }
+
+        /* SECCION MISION */
+        .Mision {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .Mision .texto {
+            flex: 1 1 400px;
+        }
+
+        .Mision .texto p {
+            font-size: 1.1rem;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        .Mision .imagen {
+            flex: 1 1 300px;
+            text-align: center;
+        }
+
+        .Mision .imagen img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease;
+        }
+
+        .Mision .imagen img:hover {
+            transform: scale(1.05);
+        }
+
+        /* SECCION VISION */
+        #vision {
+            background: linear-gradient(135deg, #68ade9 0%, #40a9d9 100%);
+            color: white;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            align-items: center;
+            padding: 40px;
+            border-radius: 10px;
+        }
+
+        #vision .texto {
+            flex: 1 1 400px;
+            order: 2;
+        }
+
+        #vision .imagen {
+            flex: 1 1 300px;
+            text-align: center;
+            order: 1;
+        }
+
+        #vision .imagen img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease;
+        }
+
+        #vision .imagen img:hover {
+            transform: scale(1.05);
+        }
+
+        #vision h2 {
+            color: white;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        #vision p {
+            font-size: 1.1rem;
+            font-weight: 500;
+            line-height: 1.8;
+            font-style: italic;
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: #0031a3;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        footer p {
+            margin-bottom: 0.5rem;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+
+            header nav {
+                gap: 1rem;
+                flex-wrap: wrap;
+            }
+
+            header nav a {
+                font-size: 0.9rem;
+            }
+
+            .Mision {
+                gap: 1.5rem;
+            }
+
+            .Mision .texto,
+            .Mision .imagen {
+                flex: 1 1 100%;
+            }
+
+            #vision {
+                gap: 1.5rem;
+            }
+
+            #vision .texto,
+            #vision .imagen {
+                flex: 1 1 100%;
+            }
+
+            section {
+                padding: 1.5rem;
+            }
+
+            section h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body id="misionyvision">
+
+    <!-- HEADER -->
+    <header>
+        <div class="header-container">
+            <h1> OASIS </h1>
+            <nav>
+                <!-- ENLACES CORREGIDOS: El "../index.html" sale de la carpeta "misionyvisoon" hacia la raíz principal -->
+                <a href="../index.html">Inicio</a>
+                <a href="../misionyvisioon/index.html" >Misión y Visión</a>
+                <a href="../tutoriales/index.html">Tutoriales y actividades STEAM</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- SECCION MISION -->
+        <section id="mision" class="Mision">
+            <div class="texto">
+                <h2>Actividades Fuera del Proyecto</h2>
+                <p> En esta sección podrás encontrar actividades que no son parte de OASIS pero a las que podrás asistir si son de tu interes como por ejemplo reforestaciones, ferias de ciencias, competencias de minisumo, talleres fuera de OASIS, entre otras más actividades divertidas que puedan llegar a ser de tu interés</p>
+            </div>
+            <div class="imagen">
+                <!-- RUTA IMAGEN CORREGIDA: Agregado "../" para que busque la foto en la carpeta de afuera -->
+                <img src="../blue.png" alt="Niños con robot sumo de Blue Changes" />
+            </div>
+        </section>
+
+        <!-- SECCION VISION -->
+        <section id="vision">
+            <div class="imagen">
+                <!-- RUTA IMAGEN CORREGIDA: Agregado "../" para que busque la foto en la carpeta de afuera -->
+                <img src="../blue.png" alt="Niños con robot sumo de Blue Changes" />
+            </div>
+            <div class="texto">
+                <h2>Visión (A partir de 3 años o menos)</h2>
+                <p>Ser el punto de partida de una generación que ve en la tecnología y la robótica una herramienta para transformar su realidad. Aspiramos a que más niñas, niños y jóvenes elijan carreras STEAM, lideren proyectos con impacto social y construyan juntos un mundo más sostenible.</p>
+            </div>
+        </section>
+    </div>
+
+   
+    <footer>
+        <p>&copy; 2026 OASIS - Colectivo Social</p>
+        <p>Transformando desechos en tecnología 🌍</p>
+        <p> Contacto Instagram: @oasis.steamx</p>
+        <p> Contacto Telefónico: +52 56 11668722</p>
+    </footer>
+</body>
+</html>
