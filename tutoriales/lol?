@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> OASIS — Dejando huella</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0B1F3F;
+    --blue:#2F5FFF;
+    --blue-deep:#1A3FCC;
+    --blue-light:#EAF1FF;
+    --cyan:#5AD1FF;
+    --sun:#FFC857;
+    --white:#FFFFFF;
+    --ink:#0B1F3F;
+    --muted:#4A5A80;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{
+    font-family:'Inter', sans-serif;
+    color:var(--ink);
+    background:var(--white);
+    line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,.display{
+    font-family:'Fredoka', sans-serif;
+    font-weight:600;
+    letter-spacing:-0.01em;
+  }
+  a{text-decoration:none; color:inherit;}
+  img{max-width:100%; display:block;}
+  .wrap{max-width:1160px; margin:0 auto; padding:0 32px;}
+
+  /* HEADER */
+  header{
+    background:var(--navy);
+    color:var(--white);
+  }
+  .header-inner{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:18px 32px;
+    max-width:1160px; margin:0 auto;
+  }
+  .logo{
+    display:flex; align-items:center; gap:10px;
+    font-family:'Fredoka', sans-serif; font-weight:700; font-size:20px;
+  }
+  .logo-dot{
+    width:12px; height:12px; border-radius:50%;
+    background:var(--sun);
+  }
+  nav{display:flex; gap:28px; font-size:14px; font-weight:500;}
+  nav a{opacity:.85; transition:opacity .2s;}
+  nav a:hover{opacity:1;}
+  .btn-cta{
+    background:var(--sun); color:var(--navy);
+    padding:10px 20px; border-radius:100px;
+    font-weight:600; font-size:14px;
+    white-space:nowrap;
+  }
+  .nav-links, .header-cta{display:flex; align-items:center;}
+  .header-cta{gap:20px;}
+
+  /* HERO */
+  .hero{
+    background:var(--blue);
+    background-image: radial-gradient(circle at 85% 15%, rgba(255,255,255,0.10), transparent 45%);
+    position:relative;
+    padding:72px 0 0;
+    overflow:hidden;
+  }
+  .hero-inner{
+    display:grid; grid-template-columns:1.1fr 1fr;
+    gap:40px; align-items:center;
+    max-width:1160px; margin:0 auto; padding:0 32px;
+  }
+  .eyebrow{
+    display:inline-flex; align-items:center; gap:8px;
+    background:rgba(255,255,255,0.15); color:var(--white);
+    padding:6px 14px; border-radius:100px;
+    font-size:13px; font-weight:600; margin-bottom:20px;
+  }
+  .hero h1{
+    color:var(--white);
+    font-size:56px; line-height:1.02;
+    margin-bottom:18px;
+  }
+  .hero h1 span{color:var(--sun);}
+  .hero p{
+    color:rgba(255,255,255,0.88);
+    font-size:17px; max-width:440px; margin-bottom:28px;
+  }
+  .hero-ctas{display:flex; gap:14px; flex-wrap:wrap;}
+  .btn-primary{
+    background:var(--sun); color:var(--navy);
+    padding:14px 26px; border-radius:100px;
+    font-weight:700; font-size:15px;
+    display:inline-block;
+  }
+  .btn-secondary{
+    background:transparent; color:var(--white);
+    border:1.5px solid rgba(255,255,255,0.5);
+    padding:14px 26px; border-radius:100px;
+    font-weight:600; font-size:15px;
+  }
+  .hero-illustration{position:relative;}
+
+  /* wave divider */
+  .wave{display:block; width:100%; margin-top:60px;}
+
+  /* SECTION GENERIC */
+  section{padding:88px 0;}
+  .section-light{background:var(--white);}
+  .section-tint{background:var(--blue-light);}
+  .eyebrow-dark{
+    color:var(--blue-deep); font-weight:700; font-size:13px;
+    letter-spacing:.04em; text-transform:uppercase; margin-bottom:14px;
+  }
+  .split{
+    display:grid; grid-template-columns:1fr 1fr;
+    gap:56px; align-items:center;
+  }
+  .split h2{font-size:34px; margin-bottom:18px;}
+  .split p{color:var(--muted); font-size:16px; margin-bottom:14px;}
+  .photo-frame{
+    border-radius:24px; overflow:hidden;
+    border:6px solid var(--navy);
+    transform:rotate(-1.5deg);
+  }
+
+  /* QUOTE */
+  .quote-section{
+    background:var(--navy); color:var(--white);
+    text-align:center;
+  }
+  .quote-mark{font-size:64px; color:var(--sun); font-family:'Fredoka'; line-height:1;}
+  .quote-section p{
+    font-family:'Fredoka'; font-weight:500;
+    font-size:28px; max-width:760px; margin:0 auto;
+    line-height:1.4;
+  }
+  .quote-section .who{
+    margin-top:24px; color:var(--cyan); font-family:'Inter'; font-size:14px; font-weight:600;
+  }
+
+  /* HOW WE DO IT / CARDS */
+  .section-title{text-align:center; max-width:600px; margin:0 auto 56px;}
+  .section-title h2{font-size:36px; margin-bottom:14px;}
+  .section-title p{color:var(--muted); font-size:16px;}
+  .cards{
+    display:grid; grid-template-columns:repeat(3,1fr); gap:26px;
+  }
+  .card{
+    background:var(--white);
+    border:2px solid #E3EAFB;
+    border-radius:22px;
+    padding:0 0 28px;
+    overflow:hidden;
+    transition:transform .2s, box-shadow .2s;
+  }
+  .card:hover{transform:translateY(-4px); box-shadow:0 16px 32px rgba(11,31,63,0.10);}
+  .card-icon{
+    background:var(--blue-light);
+    padding:36px; display:flex; justify-content:center;
+    margin-bottom:22px;
+  }
+  .card h3{font-size:21px; padding:0 26px; margin-bottom:10px;}
+  .card p{padding:0 26px; color:var(--muted); font-size:14.5px;}
+  .card-step{
+    font-family:'Fredoka'; font-weight:700; font-size:13px;
+    color:var(--blue); padding:0 26px; margin-bottom:8px; display:block;
+  }
+
+  /* IMPACT STATS */
+  .stats{
+    display:grid; grid-template-columns:repeat(4,1fr);
+    gap:24px; text-align:center;
+  }
+  .stat-num{
+    font-family:'Fredoka'; font-weight:700; font-size:40px; color:var(--blue-deep);
+  }
+  .stat-label{color:var(--muted); font-size:14px; margin-top:6px;}
+
+  /* FOOTER */
+  footer{
+    background:var(--navy); color:rgba(255,255,255,0.85);
+    padding:56px 0 28px;
+  }
+  .footer-top{
+    display:flex; justify-content:space-between; align-items:flex-start;
+    flex-wrap:wrap; gap:32px; margin-bottom:36px;
+  }
+  .footer-brand{font-family:'Fredoka'; font-weight:700; font-size:22px; color:var(--white); margin-bottom:10px;}
+  .footer-tag{max-width:320px; font-size:14px; color:rgba(255,255,255,0.65);}
+  .footer-contact{font-size:14px; line-height:2;}
+  .footer-contact a{color:var(--cyan);}
+  .footer-bottom{
+    border-top:1px solid rgba(255,255,255,0.12);
+    padding-top:20px; font-size:13px; color:rgba(255,255,255,0.5);
+    display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px;
+  }
+
+  @media (max-width:860px){
+    .hero-inner, .split{grid-template-columns:1fr;}
+    .hero h1{font-size:40px;}
+    .cards{grid-template-columns:1fr;}
+    .stats{grid-template-columns:repeat(2,1fr);}
+    nav{display:none;}
+    .quote-section p{font-size:22px;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="logo"><span class="logo-dot"></span>Blue Changes</div>
+    <div class="nav-links">
+      <nav>
+        <a href="#quienes">¿Quiénes somos?</a>
+        <a href="#como">Cómo lo hacemos</a>
+        <a href="#tutoriales">Tutoriales</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+    <div class="header-cta"><a class="btn-cta" href="#contacto">Únete</a></div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="eyebrow">🤖 Proyecto social STEAM</div>
+      <h1>Convertimos <span>desechos</span> en robots</h1>
+      <p>Enseñamos a niñas y niños de 8 a 14 años a construir mini robots sumo con materiales reciclados — despertando su curiosidad por la robótica y su cuidado por el planeta.</p>
+      <div class="hero-ctas">
+        <a class="btn-primary" href="#como">Cómo lo hacemos</a>
+        <a class="btn-secondary" href="#quienes">Conócenos</a>
+      </div>
+    </div>
+    <div class="hero-illustration">
+      <svg viewBox="0 0 420 460" xmlns="http://www.w3.org/2000/svg">
+        <!-- shadow -->
+        <ellipse cx="210" cy="430" rx="130" ry="16" fill="#1A3FCC" opacity="0.35"/>
+        <!-- legs (bottle-cap wheels) -->
+        <rect x="130" y="330" width="26" height="60" rx="8" fill="#0B1F3F"/>
+        <rect x="264" y="330" width="26" height="60" rx="8" fill="#0B1F3F"/>
+        <circle cx="143" cy="400" r="30" fill="#5AD1FF" stroke="#0B1F3F" stroke-width="6"/>
+        <circle cx="277" cy="400" r="30" fill="#5AD1FF" stroke="#0B1F3F" stroke-width="6"/>
+        <circle cx="143" cy="400" r="10" fill="#0B1F3F"/>
+        <circle cx="277" cy="400" r="10" fill="#0B1F3F"/>
+        <!-- body: tin can -->
+        <rect x="105" y="200" width="210" height="150" rx="18" fill="#EAF1FF" stroke="#0B1F3F" stroke-width="6"/>
+        <rect x="105" y="200" width="210" height="34" rx="10" fill="#5AD1FF" stroke="#0B1F3F" stroke-width="6"/>
+        <circle cx="160" cy="285" r="26" fill="#FFC857" stroke="#0B1F3F" stroke-width="6"/>
+        <circle cx="260" cy="285" r="26" fill="#FFC857" stroke="#0B1F3F" stroke-width="6"/>
+        <path d="M195 320 h30" stroke="#0B1F3F" stroke-width="6" stroke-linecap="round"/>
+        <!-- arms: bent wire/spoon -->
+        <path d="M105 240 C 55 240, 55 200, 40 175" stroke="#0B1F3F" stroke-width="10" fill="none" stroke-linecap="round"/>
+        <circle cx="35" cy="165" r="16" fill="#FFC857" stroke="#0B1F3F" stroke-width="6"/>
+        <path d="M315 240 C 365 240, 365 200, 380 175" stroke="#0B1F3F" stroke-width="10" fill="none" stroke-linecap="round"/>
+        <circle cx="385" cy="165" r="16" fill="#FFC857" stroke="#0B1F3F" stroke-width="6"/>
+        <!-- neck -->
+        <rect x="190" y="150" width="40" height="50" fill="#0B1F3F"/>
+        <!-- head: bottle cap -->
+        <rect x="140" y="70" width="140" height="90" rx="22" fill="#2F5FFF" stroke="#0B1F3F" stroke-width="6"/>
+        <rect x="140" y="70" width="140" height="24" rx="10" fill="#1A3FCC"/>
+        <circle cx="180" cy="120" r="14" fill="#FFFFFF" stroke="#0B1F3F" stroke-width="5"/>
+        <circle cx="180" cy="120" r="5" fill="#0B1F3F"/>
+        <circle cx="240" cy="120" r="14" fill="#FFFFFF" stroke="#0B1F3F" stroke-width="5"/>
+        <circle cx="240" cy="120" r="5" fill="#0B1F3F"/>
+        <path d="M195 140 q15 12 30 0" stroke="#0B1F3F" stroke-width="5" fill="none" stroke-linecap="round"/>
+        <!-- antenna -->
+        <line x1="210" y1="70" x2="210" y2="35" stroke="#0B1F3F" stroke-width="6" stroke-linecap="round"/>
+        <circle cx="210" cy="28" r="10" fill="#FFC857" stroke="#0B1F3F" stroke-width="5"/>
+      </svg>
+    </div>
+  </div>
+
+  <svg class="wave" viewBox="0 0 1440 90" preserveAspectRatio="none" style="height:70px;">
+    <path d="M0,32 C240,80 480,0 720,24 C960,48 1200,88 1440,40 L1440,90 L0,90 Z" fill="#FFFFFF"/>
+  </svg>
+</section>
+
+<section class="section-light" id="quienes">
+  <div class="wrap split">
+    <div>
+      <div class="eyebrow-dark">¿Quiénes somos?</div>
+      <h2>Robótica accesible para comunidades que rara vez la tienen</h2>
+      <p>Blue Changes es un proyecto social que enseña a construir mini robots sumo de pelea con base en materiales reciclados, acercando la tecnología a niñas y niños que la sienten lejana.</p>
+      <p>También buscamos sensibilizar sobre el cuidado ambiental a través de la reutilización, y visibilizar el rol de las mujeres en las áreas STEAM.</p>
+    </div>
+    <div class="photo-frame">
+      <img src="https://wsqfgo.github.io/Blue-Changes-/blue.png" alt="Niños con robot sumo de Blue Changes">
+    </div>
+  </div>
+</section>
+
+<section class="quote-section">
+  <div class="wrap">
+    <div class="quote-mark">“</div>
+    <p>Empoderar a la juventud de comunidades vulnerables a través de la robótica de bajo costo, transformando desechos en tecnología y cerrando la brecha educativa en STEAM.</p>
+    <div class="who">— Nuestro propósito</div>
+  </div>
+</section>
+
+<section class="section-light" id="como">
+  <div class="wrap">
+    <div class="section-title">
+      <div class="eyebrow-dark" style="text-align:center;">Cómo lo hacemos</div>
+      <h2>De la basura al ring de sumo</h2>
+      <p>Cada actividad integra los principios STEAM para despertar el pensamiento crítico y la creatividad de cada niño y niña.</p>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <div class="card-icon">
+          <svg width="72" height="72" viewBox="0 0 72 72"><rect x="14" y="20" width="44" height="34" rx="8" fill="#5AD1FF" stroke="#0B1F3F" stroke-width="4"/><path d="M22 20 l6-10h16l6 10" fill="none" stroke="#0B1F3F" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="28" cy="37" r="4" fill="#0B1F3F"/><circle cx="44" cy="37" r="4" fill="#0B1F3F"/></svg>
+        </div>
+        <span class="card-step">PASO 1</span>
+        <h3>Recicla</h3>
+        <p>Reunimos materiales reutilizables — latas, tapas, cartón — que se convertirán en el cuerpo de cada robot.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">
+          <svg width="72" height="72" viewBox="0 0 72 72"><rect x="16" y="14" width="40" height="44" rx="6" fill="#FFC857" stroke="#0B1F3F" stroke-width="4"/><line x1="24" y1="26" x2="48" y2="26" stroke="#0B1F3F" stroke-width="4" stroke-linecap="round"/><line x1="24" y1="36" x2="48" y2="36" stroke="#0B1F3F" stroke-width="4" stroke-linecap="round"/><line x1="24" y1="46" x2="38" y2="46" stroke="#0B1F3F" stroke-width="4" stroke-linecap="round"/></svg>
+        </div>
+        <span class="card-step">PASO 2</span>
+        <h3>Diseña y construye</h3>
+        <p>Con guía paso a paso, cada equipo arma su propio mini robot sumo aplicando principios de ingeniería y electrónica básica.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">
+          <svg width="72" height="72" viewBox="0 0 72 72"><circle cx="36" cy="36" r="22" fill="#2F5FFF" stroke="#0B1F3F" stroke-width="4"/><circle cx="36" cy="36" r="10" fill="#FFFFFF" stroke="#0B1F3F" stroke-width="4"/></svg>
+        </div>
+        <span class="card-step">PASO 3</span>
+        <h3>Compite</h3>
+        <p>Los robots se enfrentan en el ring de sumo — una forma divertida de ver en acción todo lo aprendido.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-tint">
+  <div class="wrap stats">
+    <div><div class="stat-num">8–14</div><div class="stat-label">años, edad de los participantes</div></div>
+    <div><div class="stat-num">100%</div><div class="stat-label">materiales reciclados</div></div>
+    <div><div class="stat-num">STEAM</div><div class="stat-label">enfoque pedagógico</div></div>
+    <div><div class="stat-num">♀</div><div class="stat-label">impulsando mujeres en tecnología</div></div>
+  </div>
+</section>
+
+<footer id="contacto">
+  <div class="wrap">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">🤖 Blue Changes</div>
+        <p class="footer-tag">Transformando desechos en tecnología. Proyecto social de robótica STEAM para comunidades vulnerables.</p>
+      </div>
+      <div class="footer-contact">
+        <div>Instagram: <a href="#">@bluechanges</a></div>
+        <div>Teléfono: <a href="#">+52 56 1166 8722</a></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Blue Changes — Proyecto Social</span>
+      <span>Dejando huella 🌍</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
